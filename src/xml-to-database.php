@@ -27,11 +27,7 @@ foreach( $employees as $employee )
   $salary = $salaries->item(0)->nodeValue; 
   
    $sql = $dbh->prepare("INSERT INTO `employees` (`name`, `age`, `salary`) VALUES (?, ?, ?)");
-   $sql->execute(array(
-     $name,
-     $age,
-	 $salary
-   ));  
+   $sql->execute(array( $name, $age, $salary ));  
   echo "<b>$name - $age - $salary\n</b><br>"; 
   }
 ?>

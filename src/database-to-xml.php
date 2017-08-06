@@ -9,8 +9,8 @@ $sql_db = "parse_db";
 
 $dbh = new PDO("{$sql_type}:dbname={$sql_db};host={$sql_host};port={$sql_port}", $sql_user, $sql_pw);
 
-	 $employees = $dbh->prepare("SELECT * FROM `employees`");
-   $employees->execute();
+  $employees = $dbh->prepare("SELECT * FROM `employees`");
+  $employees->execute();
    
   $doc = new DOMDocument(); 
   $doc->formatOutput = true; 
